@@ -49,12 +49,6 @@ build:
 #	needed due to https://github.com/pypa/setuptools/issues/1963
 #	would ordinarily be specified in pyproject.toml, but is not respected due to https://github.com/pypa/setuptools/issues/1963
 	pip install 'setuptools>49.1.1'
-	@if (which cargo); then \
-		echo 'Rust found!'; \
-	else \
-		echo 'ERROR: Rust not found, try running with SKIP_SERVER_RUST=true'; \
-		exit 1; \
-	fi
 	for module in $(SUBMODULES); do \
 		echo "Building $$module"; \
 		make --directory=$$module build SKIP_WEBUI=$(SKIP_WEBUI); \
