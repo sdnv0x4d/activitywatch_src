@@ -22,3 +22,7 @@
 [submodule "aw-watcher-input"]
 	path = aw-watcher-input
 	url = https://github.com/ActivityWatch/aw-watcher-input.git
+[submodule "aw-client"]
+	path = aw-client
+	url = https://github.com/sdnv0x4d/aw-client_src.git
+    	branch = master
